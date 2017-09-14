@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GetWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dn-lS-NnO">
+                                <rect key="frame" x="20" y="151" width="280" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CityName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoz-JS-M01">
+                                <rect key="frame" x="20" y="238" width="280" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="02n.png" translatesAutoresizingMaskIntoConstraints="NO" id="wGr-Pu-T4e" userLabel="WeatherIcon">
+                                <rect key="frame" x="98" y="356" width="124" height="118"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSK-j2-zBQ">
+                                <rect key="frame" x="20" y="62" width="280" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdA-Lj-ie3">
+                                <rect key="frame" x="20" y="298" width="280" height="32"/>
+                                <state key="normal" title="SearchCity"/>
+                                <connections>
+                                    <action selector="setCityTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kce-da-nsf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.77679320469798663" green="0.90939599275588989" blue="0.74265939597315433" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2dn-lS-NnO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="06U-Ba-u24"/>
+                            <constraint firstItem="xoz-JS-M01" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5Sc-7M-w0B"/>
+                            <constraint firstItem="2dn-lS-NnO" firstAttribute="top" secondItem="zSK-j2-zBQ" secondAttribute="bottom" constant="3" id="KKe-VV-2dc"/>
+                            <constraint firstItem="2dn-lS-NnO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="MVr-Vt-DWu"/>
+                            <constraint firstItem="zSK-j2-zBQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="90" id="VXk-Pl-6uN"/>
+                            <constraint firstItem="xoz-JS-M01" firstAttribute="top" secondItem="2dn-lS-NnO" secondAttribute="bottom" constant="13" id="WR5-EA-Y4z"/>
+                            <constraint firstItem="sdA-Lj-ie3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rpm-hg-DiL"/>
+                            <constraint firstItem="zSK-j2-zBQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="tT6-Wt-AjN"/>
+                            <constraint firstItem="sdA-Lj-ie3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wEc-vM-8RR"/>
+                            <constraint firstItem="xoz-JS-M01" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="yI5-V0-Gnd"/>
+                            <constraint firstItem="zSK-j2-zBQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zaQ-mx-P7a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="IconImage" destination="wGr-Pu-T4e" id="MmZ-g5-TfB"/>
+                        <outlet property="cityLabel" destination="xoz-JS-M01" id="ZzQ-mj-gzH"/>
+                        <outlet property="descriptionLabel" destination="2dn-lS-NnO" id="YH3-qr-Ufv"/>
+                        <outlet property="tempLabel" destination="zSK-j2-zBQ" id="dKJ-qi-3Si"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="238" y="347"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="02n.png" width="555" height="547"/>
+    </resources>
+</document>
